@@ -134,6 +134,33 @@
 </section>
 
 
+<!-- Collage Section -->
+<!-- Collage Section -->
+<section id="collage" class="collage-section">
+    <div class="container mx-auto px-4 py-8">
+        {{ $images := slice }}
+        {{ range first 27 .Site.Data.collage }}
+            {{ $images = $images | append . }}
+        {{ end }}
+        {{ $imageCount := len $images }}
+        {{ $columns := 9 }}
+        {{ $rows := 3 }}
+        {{ $maxItems := mul $columns $rows }}
+        {{ if gt $imageCount $maxItems }}
+            {{ $images = first $maxItems $images }}
+        {{ end }}
+        <div class="collage-grid" style="grid-template-columns: repeat({{ $columns }}, 1fr);">
+            {{ range $images }}
+            <a href="{{ .link }}" class="collage-item">
+                <div class="collage-image-container">
+                    <img src="{{ .image }}" alt="{{ .title }}">
+                    <div class="collage-title">{{ .title }}</div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
 
 
