@@ -1,5 +1,9 @@
 {{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
-<article class="max-w-full prose dark:prose-invert">
+
+
+<!-- hero section below -->
+
+<article class="max-w-full prose dark:prose-invert hero-section">
     <div class="relative">
         <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
         <div class="mx-auto max-w-7xl p-0">
@@ -53,14 +57,7 @@
                     </h2>
                     <!-- Add the call to action button with custom CSS -->
                     <div class="mt-4">
-                        <a
-                            class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
-                            href="#explore"
-                            target="_self"
-                            role="#explore"
-                        >
-                            Explore Routines
-                        </a>
+                        <a href="#explore" class="routine-button">Explore Routines</a>
                     </div>
                     <div class="mt-3 mb-10 text-2xl">
                         {{ with .Site.Author.links }}
@@ -81,6 +78,62 @@
         </div>
     </div>
 </article>
+
+
+<!-- hero section below -->
+
+<section id="featured-routines" class="routine-section">
+    <div class="container mx-auto px-4">
+        <h1 class="section-title">Featured Routines</h1>
+        <div class="routine-grid">
+            <div class="routine-card">
+                <div class="routine-image-container">
+                    <img class="routine-image" src="https://assets-global.website-files.com/650bcafece14a8cf38924180/652bc4bbb8dc5f55fe9ea586_Dr_Andrew_Huberman.jpg" alt="Dr. Andrew Huberman">
+                </div>
+                <div class="routine-content">
+                    <div class="routine-text">
+                        <h2 class="routine-title">Dr. Andrew Huberman, PhD</h2>
+                        <h3 class="routine-subtitle">Optimizing Brain Performance Through Science-Based Routines</h3>
+                        <p class="routine-description">Dr. Andrew D. Huberman is a renowned neuroscientist and a permanent faculty member at Stanford University School of Medicine. This piece explores Dr. Huberman's daily routines and strategies for optimal performance.</p>
+                    </div>
+                    <div class="routine-footer">
+                        <div class="routine-highlights">
+                            <span class="highlight-label highlight1">Energy</span>
+                            <span class="highlight-label highlight2">Dopamine</span>
+                            <span class="highlight-label highlight3">Performance</span>
+                            <span class="highlight-label highlight2">Testosterone</span>
+                        </div>
+                        <a href="#explore" class="routine-button">Explore Routine</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="routine-card">
+                <div class="routine-image-container">
+                    <img class="routine-image" src="https://assets-global.website-files.com/650bcafece14a8cf38924180/652e2caee0d72d521adc68de_dr.-peter-attia-on-good-routine-club-p-500.jpg" alt="Dr. Peter Attia">
+                </div>
+                <div class="routine-content">
+                    <div class="routine-text">
+                        <h2 class="routine-title">Dr. Peter Attia, MD</h2>
+                        <h3 class="routine-subtitle">Longevity and Optimal Performance Strategies</h3>
+                        <p class="routine-description">Dr. Peter Attia is a renowned physician focusing on the applied science of longevity and optimal performance. This piece explores Dr. Attia's daily habits and routines for maximizing health and productivity.</p>
+                    </div>
+                    <div class="routine-footer">
+                        <div class="routine-highlights">
+                            <span class="highlight-label highlight1">Energy</span>
+                            <span class="highlight-label highlight2">Dopamine</span>
+                            <span class="highlight-label highlight3">Performance</span>
+                            <span class="highlight-label highlight4">Nutrition</span>
+                        </div>
+                        <a href="#explore" class="routine-button">Explore Routine</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 
