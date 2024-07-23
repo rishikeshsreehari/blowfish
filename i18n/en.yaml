@@ -69,7 +69,7 @@ sharing:
   bluesky: "Post on Bluesky"
 
 shortcode:
-  recent_articles: "Recent"
+  recent_articles: "Explore"
 
 recent:
-  show_more: "Show More"
+  show_more: "View More"
