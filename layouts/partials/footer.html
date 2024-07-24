@@ -26,15 +26,11 @@
     {{/* Copyright */}}
     {{ if .Site.Params.footer.showCopyright | default true }}
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
-      {{- with replace .Site.Params.copyright "{ year }" now.Year  }}
-      {{ . | markdownify }}
-      {{- else }}
-      &copy;
-      {{ now.Format "2006" }}
-      {{ .Site.Author.name | markdownify }}
-      {{- end }}
+      {{ .Site.Title }} &copy; {{ now.Format "2006" }} <br>
+      <span class="version-number">v{{ .Site.Params.version }}</span>
     </p>
-    {{ end }}
+  {{ end }}
+    
 
     {{/* Theme attribution */}}
     {{ if .Site.Params.footer.showThemeAttribution | default true }}
